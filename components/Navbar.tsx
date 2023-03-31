@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import { black600 } from "../config/colors";
+import Hamburger from "./Hamburger";
 
 const Navbar = () => {
   return (
@@ -15,13 +17,35 @@ const Navbar = () => {
           backgroundColor: "aqua",
         }}
       >
-        <Box>111</Box>
-        <Box sx={{ marginLeft: "1.5rem" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Hamburger />
+        </Box>
+        <Box
+          sx={{
+            display: {
+              xs: "none",
+              sm: "flex",
+
+              flexDirection: "column",
+            },
+          }}
+        >
           <Typography
             variant="h6"
-            sx={{ fontSize: "0.9rem", fontWeight: 600, marginBottom: "-2px" }}
+            sx={{
+              fontSize: "0.9rem",
+              fontWeight: 600,
+              marginBottom: "-2px",
+              color: black600,
+            }}
           >
-            Vita Corner Cafe
+            Vita
           </Typography>
           <Typography variant="body2" sx={{ color: "gray" }}>
             Inventory
