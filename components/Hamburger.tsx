@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Box } from "@mui/material";
-import { green300 } from "../config/colors";
+import { green300, black600 } from "../config/colors";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -11,6 +11,7 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 import FileCopyOutlinedIcon from "@mui/icons-material/FileCopyOutlined";
 import LegendToggleOutlinedIcon from "@mui/icons-material/LegendToggleOutlined";
+import Typography from "@mui/material/Typography";
 
 const Hamburger = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -26,7 +27,13 @@ const Hamburger = () => {
     setActiveNav("false");
   };
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -106,6 +113,30 @@ const Hamburger = () => {
           Track Supply Orders
         </MenuItem>
       </Menu>
+      <Box
+        sx={{
+          display: {
+            xs: "none",
+            sm: "flex",
+            flexDirection: "column",
+          },
+        }}
+      >
+        <Typography
+          variant="h6"
+          sx={{
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            marginBottom: "-2px",
+            color: black600,
+          }}
+        >
+          Vita
+        </Typography>
+        <Typography variant="body2" sx={{ color: "gray" }}>
+          Inventory
+        </Typography>
+      </Box>
     </Box>
   );
 };
