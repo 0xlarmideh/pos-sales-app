@@ -20,6 +20,10 @@ const Navbar = () => {
       </Box>
       <Box
         sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "10px",
           flex: 3,
         }}
       >

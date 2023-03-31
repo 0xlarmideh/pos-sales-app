@@ -3,7 +3,6 @@ import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
 import Avatar from "@mui/material/Avatar";
-import { gray500 } from "../config/colors";
 
 const data = [
   {
@@ -20,6 +19,11 @@ const data = [
     id: 3,
     name: "Anna K.",
     avatar: "/50.jpg",
+  },
+  {
+    id: 4,
+    name: "Mike J.",
+    avatar: "/66.jpg",
   },
 ];
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -61,7 +65,8 @@ const NavAvatar = () => {
             border: "1px solid #cccccc",
             borderRadius: 10,
             width: "fit-content",
-            padding: "3px 10px",
+            height: 35,
+            padding: "0 10px",
             display: "flex",
             alignItems: "center",
             gap: 1,
