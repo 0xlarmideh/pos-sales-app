@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Vita Sales POS</title>
         <meta
           name="description"
           content="Vita-OS-POS Web App by Bright & Abdulhameed"
