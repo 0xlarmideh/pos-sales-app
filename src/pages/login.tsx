@@ -1,14 +1,39 @@
-import { ReactNode } from "react";
-import LoginLayout from "../../components/Login/LoginLayout"
+import { ReactElement, ReactNode } from "react";
+import { NextPage } from "next";
+import LoginLayout from "../../components/Login/layout";
 import LoginForm from "../../components/Login/LoginForm";
+import Logo from "../../components/Login/Logo";
+import LoginSvgs from "../../components/Login/LoginSvgs";
+import { Container } from "@mui/material";
 
-const Login = () => {
+type loginLayout = NextPage & {
+  getLayout: (page: ReactElement) => ReactNode;
+};
+
+const Login: loginLayout = () => {
   return (
     <div>
-      <LoginLayout>
-        <LoginForm />
-      </LoginLayout>
+      <LoginForm />
     </div>
+  );
+};
+
+Login.getLayout = function (page: ReactElement) {
+  return (
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        width: "500px",
+        height: "88vh",
+        marginY: "20px",
+      }}
+    >
+      <Logo />
+      {page}
+      <LoginSvgs />
+    </Container>
   );
 };
 
