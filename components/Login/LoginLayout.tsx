@@ -1,12 +1,24 @@
 import { ReactNode } from "react";
-import LoginForm from "./LoginForm";
+import LoginSvgs from "./LoginSvgs";
+import Logo from "./Logo";
+import { Container } from "@mui/material";
 
 const LoginLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        width: "500px",
+        height: "88vh",
+        marginBottom: "40px"
+      }}
+    >
+      <Logo />
       {children}
-      <LoginForm />
-    </div>
+      <LoginSvgs />
+    </Container>
   );
 };
 

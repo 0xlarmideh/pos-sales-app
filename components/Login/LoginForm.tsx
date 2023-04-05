@@ -35,26 +35,35 @@ const LoginForm = () => {
         justifyContent: "center",
         flexDirection: "column",
         gap: "20px",
-        width: "500px",
       }}
     >
-      <Typography variant="h2">Welcome back</Typography>
-      <Typography variant="body1">Sign in to your Dashboard</Typography>
+      <Typography
+        variant="h3"
+        align="center"
+        sx={{
+          lineHeight: "20px",
+          marginTop: "40px",
+        }}
+      >
+        Welcome back
+      </Typography>
+      <Typography variant="body1" align="center">
+        Sign in to your Dashboard
+      </Typography>
       <Box
         component="form"
-        sx={{ display: "flex", flexDirection: "column", gap: "30px" }}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "30px",
+          marginTop: "10px",
+        }}
       >
         <TextField
           variant="outlined"
           label="Username"
           value={account.accountName}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <AccountCircleIcon></AccountCircleIcon>
-              </InputAdornment>
-            ),
-          }}
+          required
           sx={{
             width: "100%",
           }}
@@ -67,8 +76,9 @@ const LoginForm = () => {
           sx={{
             width: "100%",
           }}
+          
         >
-          <InputLabel htmlFor="account-password">Password</InputLabel>
+          <InputLabel htmlFor="account-password">Password *</InputLabel>
           <OutlinedInput
             id="account-password"
             value={account.password}
@@ -85,7 +95,7 @@ const LoginForm = () => {
                 </IconButton>
               </InputAdornment>
             }
-            label="Password"
+            label="Password *"
             onChange={(e) => {
               setAccount({ ...account, password: e.target.value });
             }}
@@ -95,12 +105,11 @@ const LoginForm = () => {
         <Button
           variant="contained"
           sx={{
-            paddingY: "12px"
+            paddingY: "12px",
           }}
           onClick={(e) => {
             e.preventDefault();
-            setAccount({...account, accountName: "", password: ""})
-            console.log("Cleared")
+            setAccount({ ...account, accountName: "", password: "" });
           }}
         >
           Sign in
