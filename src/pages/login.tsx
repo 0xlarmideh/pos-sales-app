@@ -1,6 +1,5 @@
 import { ReactElement, ReactNode } from "react";
 import { NextPage } from "next";
-import LoginLayout from "../../components/Login/layout";
 import LoginForm from "../../components/Login/LoginForm";
 import Logo from "../../components/Login/Logo";
 import LoginSvgs from "../../components/Login/LoginSvgs";
