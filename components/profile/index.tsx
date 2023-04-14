@@ -1,6 +1,7 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { black500, black800 } from "../../config/colors";
+import ProfilePopover from "./ProfilePopover";
 
 const Profile = () => {
   const [time, setTime] = useState(new Date());
@@ -19,7 +20,14 @@ const Profile = () => {
   });
 
   return (
-    <Box sx={{ display: "flex", gap: "0.5rem" }}>
+    <Box
+      sx={{
+        display: "flex",
+        gap: "0.5rem",
+        flex: 1,
+        justifyContent: "flex-end",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -33,8 +41,9 @@ const Profile = () => {
             display: "flex",
             justifyContent: "flex-end",
             fontWeight: 600,
-            fontSize: "0.9rem",
+            fontSize: { xs: "0.8rem", sm: "0.9rem" },
             color: black800,
+            whiteSpace: "nowrap",
           }}
         >
           John Doe
@@ -42,12 +51,13 @@ const Profile = () => {
         <Typography
           variant="body2"
           sx={{
-            fontWeight: 500,
+            fontWeight: 600,
             color: black500,
-            fontSize: "0.8rem",
+            fontSize: "0.6rem",
+            whiteSpace: "nowrap",
           }}
         >
-          Clocked in {formattedTime}
+          Time In {formattedTime}
         </Typography>
       </Box>
       <Box
@@ -58,7 +68,7 @@ const Profile = () => {
           padding: "0.5rem",
         }}
       >
-        <Avatar sx={{ cursor: "pointer" }}>JD</Avatar>
+        <ProfilePopover />
       </Box>
     </Box>
   );
