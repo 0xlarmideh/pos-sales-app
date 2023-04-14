@@ -3,6 +3,7 @@ import Hamburger from "./Hamburger";
 import NavAvatar from "./NavAvatar";
 import { FiSearch } from "react-icons/fi";
 import { useState } from "react";
+import Profile from "./profile";
 
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -101,7 +102,9 @@ const Navbar = () => {
             <FiSearch size={24} />
           </Box>
         )}
-        <Box>AVATAR</Box>
+        <Box>
+          <Profile />
+        </Box>
       </Box>
     </Box>
   );
