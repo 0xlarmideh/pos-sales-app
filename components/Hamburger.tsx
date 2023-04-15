@@ -1,4 +1,5 @@
-import * as React from "react";
+// import * as React from "react";
+import { useState } from "react";
 import { Box } from "@mui/material";
 import { green300, black600 } from "../config/colors";
 import Button from "@mui/material/Button";
@@ -14,8 +15,8 @@ import LegendToggleOutlinedIcon from "@mui/icons-material/LegendToggleOutlined";
 import Typography from "@mui/material/Typography";
 
 const Hamburger = () => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [activeNav, setActiveNav] = React.useState("false");
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [activeNav, setActiveNav] = useState("false");
 
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {

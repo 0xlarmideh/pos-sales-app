@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": "Sugar",
+    "amount": 16,
+    "color" : "#75bca3"
+  },
+  {
+    "id": 2,
+    "category": "Bananas",
+    "amount": 15,
+    "color" : "#b775ff"
+  },
+  {
+    "id": 3,
+    "category": "Container",
+    "amount": 8,
+    "color" : "#4fb51c"
+  },
+  {
+    "id": 4,
+    "category": "Roe",
+    "amount": 15,
+    "color" : "#63d0f2"
+  },
+  {
+    "id": 5,
+    "category": "Beef",
+    "amount": 17,
+    "color" : "#68b29d"
+  },
+  {
+    "id": 6,
+    "category": "Fish - Halibut",
+    "amount": 18,
+    "color" : "#1d72cd"
+  },
+  {
+    "id": 7,
+    "category": "Filo Dough",
+    "amount": 7,
+    "color" : "#f5f36f"
+  },
+  {
+    "id": 8,
+    "category": "Tortillas",
+    "amount": 6,
+    "color" : "#6f6254"
+  }
+]
