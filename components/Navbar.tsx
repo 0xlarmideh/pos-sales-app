@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Hamburger from "./Hamburger";
 import NavAvatar from "./NavAvatar";
+import Profile from "./profile";
 
 const Navbar = () => {
   return (
@@ -29,13 +30,15 @@ const Navbar = () => {
       >
         <NavAvatar />
       </Box>
+
       <Box
         sx={{
           flex: 1,
-          backgroundColor: "orange",
+          display: "flex",
+          justifyContent: "flex-end",
         }}
       >
-        3
+        <Profile />
       </Box>
     </Box>
   );
