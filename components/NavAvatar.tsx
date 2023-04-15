@@ -20,11 +20,6 @@ const data = [
     name: "Anna K.",
     avatar: "/50.jpg",
   },
-  {
-    id: 4,
-    name: "Mike J.",
-    avatar: "/66.jpg",
-  },
 ];
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -65,11 +60,14 @@ const NavAvatar = () => {
             border: "1px solid #cccccc",
             borderRadius: 10,
             width: "fit-content",
-            height: 35,
+            height: 30,
             padding: "0 10px",
-            display: "flex",
+            display: {
+              xs: "none",
+              sm: "flex",
+            },
             alignItems: "center",
-            gap: 1,
+            gap: "0.2rem",
           }}
         >
           <StyledBadge
@@ -80,10 +78,10 @@ const NavAvatar = () => {
             <Avatar
               alt={item.name}
               src={item.avatar}
-              sx={{ width: 28, height: 28 }}
+              sx={{ width: 24, height: 24 }}
             />
           </StyledBadge>
-          <Typography variant="body2" sx={{ fontSize: 14 }}>
+          <Typography variant="body2" sx={{ fontSize: 12 }}>
             {item.name}
           </Typography>
         </Box>
