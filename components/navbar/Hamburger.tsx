@@ -1,7 +1,7 @@
 // import * as React from "react";
 import { useState } from "react";
 import { Box } from "@mui/material";
-import { green300, black600 } from "../config/colors";
+import { green300, black600 } from "../../config/colors";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
