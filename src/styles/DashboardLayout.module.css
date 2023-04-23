@@ -1,0 +1,18 @@
+/* DashboardLayout.module.css */
+
+.link {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  border-left: 5px solid transparent;
+}
+
+.link:hover {
+  background-color: #eee;
+}
+
+.active {
+  background-color: orange;
+  border-left-color: red;
+}
