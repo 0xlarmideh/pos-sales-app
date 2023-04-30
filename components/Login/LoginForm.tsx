@@ -12,15 +12,14 @@ import {
   Typography,
 } from "@mui/material";
 import Container from "@mui/material/Container";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const LoginForm = () => {
 
   const [showPassword, setShowPassword] = React.useState(false);
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handlePassword = () => setShowPassword((show) => !show);
+  const handleMouseDown = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
   };
   const [account, setAccount] = React.useState({
@@ -87,8 +86,8 @@ const LoginForm = () => {
               <InputAdornment position="end">
                 <IconButton
                   aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
+                  onClick={handlePassword}
+                  onMouseDown={handleMouseDown}
                   edge="end"
                 >
                   {showPassword ? <VisibilityOff /> : <Visibility />}
