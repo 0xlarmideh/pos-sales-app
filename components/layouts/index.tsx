@@ -41,7 +41,28 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
               Food
             </a>
           </Box>
-
+          <Box>
+            <a
+              href="/test"
+              className={`
+                ${styles.link}
+                ${isActive("/test") ? styles.active : ""}
+              `}
+            >
+              Water
+            </a>
+          </Box>
+          <Box>
+            <a
+              href="/test"
+              className={`
+                ${styles.link}
+                ${isActive("/test") ? styles.active : ""}
+              `}
+            >
+              Fast food
+            </a>
+          </Box>
           <Box>
             <a
               href="/test"
@@ -53,7 +74,28 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
               Pizza
             </a>
           </Box>
-
+          <Box>
+            <a
+              href="/test"
+              className={`
+                ${styles.link}
+                ${isActive("/test") ? styles.active : ""}
+              `}
+            >
+              Appetizer
+            </a>
+          </Box>
+          <Box>
+            <a
+              href="/dashboard/sea-food"
+              className={`
+                ${styles.link}
+                ${isActive("/dashboard/sea-food") ? styles.active : ""}
+              `}
+            >
+              Sea food
+            </a>
+          </Box>
           <Box>
             <a
               href="/dashboard/sides"
@@ -67,7 +109,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
           </Box>
         </Box>
         <Box sx={{ flex: 3 }}>
-          {/* <MenuList /> */}
+          <MenuList />
           {children}
         </Box>
         <Box sx={{ flex: 2 }}>Rightbar (Cart)</Box>

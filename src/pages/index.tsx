@@ -1,5 +1,6 @@
 import { Container } from "@mui/material";
 import Head from "next/head";
+import Login from "./login";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
+        <Login />
       </main>
     </>
   );
