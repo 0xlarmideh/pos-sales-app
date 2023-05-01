@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import Hamburger from "./Hamburger";
 import NavAvatar from "./NavAvatar";
-import Profile from "./profile";
+import Profile from "../profile";
 
 const Navbar = () => {
   return (
